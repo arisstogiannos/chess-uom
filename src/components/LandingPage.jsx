@@ -33,7 +33,7 @@ function LandingPage() {
       transition: {
         duration: 0.4,
         ease: [0, 0.55, 0.45, 1],
-        delay: 1.5
+        delay: 1
       },
     },
     exit: {
@@ -66,14 +66,14 @@ function LandingPage() {
 
   return (
     <section className="h-screen text-myWhite flex ">
-      <div className="w-2/4  text-center mx-auto mt-16 pointer-events-none relative tracking-wide">
+      <div className="w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
         <motion.h1 
         variants={variants}
         initial="exit"
         animate="enter"
         exit="exit" className="text-3xl capitalize font-semibold mb-10">
           
-            Καλώς ορίσατε στην Σκακιστική ομάδα του. Πανεπιστημίου Μακεδονίας!
+            Καλώς ορίσατε στην Σκακιστική ομάδα του Πανεπιστημίου Μακεδονίας!
           
         </motion.h1>
         <motion.p 
@@ -86,6 +86,8 @@ function LandingPage() {
           θέλουν να ασχοληθούν με το αγαπημένο τους άθλημα αλλά και με άτομα που.
           δεν είναι, αλλά έχουν θέληση να μάθουν περισσότερα.
         </motion.p>
+        {/* <div className=" -z-10 absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-myOrange filter blur-[110px] size-[200px] rounded-sm"></div>
+        <div className=" -z-20 absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-myWhite filter blur-[200px] size-[200px] rounded-sm"></div> */}
         {/* <div className=" -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-myOrange filter blur-[110px] size-[500px] rounded-full"></div>
         <div className=" -z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-myWhite filter blur-[200px] size-[700px] rounded-full"></div> */}
       </div>

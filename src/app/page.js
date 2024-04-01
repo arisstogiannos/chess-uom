@@ -18,16 +18,14 @@ export default function Home() {
   }
 
   return (
-<main id="canvas3d" className="mx-20  ">
-      <Navbar spline={spline} setPage={setPage} page={page} />
-      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 -translate-y-1/2 w-screen  ">
-        <Suspense fallback={<div className="size-96 bg-myOrange"></div>}>
+    <main id="canvas3d" className="  ">
+      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen   ">
 
         <Spline
           onLoad={onLoad}
           scene="https://prod.spline.design/Cyk1LeDuv8KuAT5W/scene.splinecode"        />
-        </Suspense>
       </div>
+      <Navbar spline={spline} setPage={setPage} page={page} />
       <AnimatePresence mode="wait">
         {page === 0 ? <LandingPage key={0} spline={spline} /> : <About key={1} />}
       </AnimatePresence>
