@@ -65,7 +65,7 @@ function LandingPage() {
 //   }
 
   return (
-    <section className="h-screen text-myWhite flex ">
+    <section className="h-screen text-myWhite flex mt-6">
       <div className="w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
         <motion.h1 
         variants={variants}

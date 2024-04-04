@@ -18,7 +18,7 @@ module.exports = {
         myOrange:'#FFA800',
       },
       screens:{
-        '3xl':'1600px'
+        '3xl':'1800px'
       }
     },
   },

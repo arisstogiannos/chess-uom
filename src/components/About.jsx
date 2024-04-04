@@ -24,8 +24,8 @@ function About() {
   };
   return (
     <section className="myContainer mx-auto">
-      <div className="text-myWhite ml-auto w-2/3 flex flex-col gap-24 3xl:gap-40">
-        <div className="w-2/3 flex flex-col gap-2">
+      <div className="text-myWhite ml-auto w-2/3 flex flex-col gap-14 3xl:gap-40">
+        <div className="w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
             className="text-2xl font-semibold tracking-wide "
             variants={variants}
@@ -62,14 +62,13 @@ function About() {
             exit="exit"
             className="mt-2"
           >
-            Η ομάδα αυτή, θα έχει ενεργό ρόλο με υλοποίηση διάφορων
-            δραστηριοτήτων, όπως η συνάντηση των μελών της για φιλικούς αγώνες ή
-            μαθήματα και συμβουλές από πιο έμπειρους παίκτες. Επίσης, μπορεί να
-            συμμετάσχει μελλoντικά σε πανεπιστημιακούς αγώνες που θα
-            διοργανωθούν.
+            Η σκακιστική ομάδα του ΠΑ.ΜΑΚ. ιδρύθηκε το 2022. Συντελείται από
+            σχεδών 100 φοιτητές και απόφοιτους από όλα τα τμήματα της σχολής και
+            όλα τα επίπεδα παιχτηκής δυναμικότητας.
           </motion.p>
         </div>
-        <div className="w-2/3 ml-auto z-50 flex flex-col gap-2">
+      
+        <div className="w-1/2 ml-auto z-50 flex flex-col gap-2 ">
           <motion.h3
             className="text-2xl font-semibold tracking-wide"
             variants={variants}
@@ -77,7 +76,7 @@ function About() {
             animate="enter"
             exit="exit"
           >
-            Επικοινωνία
+            Δράσεις
           </motion.h3>
           <motion.hr
             initial={{ scaleX: 0 }}
@@ -103,29 +102,29 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2"
+            className="z-50 mt-2 "
           >
-            Βρείτε μας στο{" "}
-            <a
-              href="https://www.facebook.com/groups/455607596757531"
-              target="_blank"
-              className="text-myOrange underline text-lg"
-            >
-              Facebook
-            </a>{" "}
-            και στο{" "}
-            <a
-              href="https://discord.gg/XXf6pvePrv"
-              target="_blank"
-              className="text-myOrange underline text-lg "
-            >
-              Discord
-            </a>
-            .Για οποιαδήποτε άλλη επιθυμητή επικοινωνία με τα ιδρυτικά μέλη της
-            ομάδας στείλτε μας ένα e-mail στο chess@uom.edu.gr
+            <ul className="flex flex-col gap-2">
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div>{" "}
+                Εβδομαδιαίες συναντήσεις μελών.
+              </li>
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div> Φιλικές
+                παρτίδες
+              </li>
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div> Μαθήματα
+                από υψηλόβαθμους σκακιστές.
+              </li>
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div>{" "}
+                Συμμετοχή σε τουρνουά.
+              </li>
+            </ul>
           </motion.p>
         </div>
-        <div className="w-2/3 flex flex-col gap-2">
+        <div className="w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
             className="text-2xl font-semibold tracking-wide"
             variants={variants}
@@ -133,7 +132,7 @@ function About() {
             animate="enter"
             exit="exit"
           >
-            Συμμετοχή
+            Στόχοι
           </motion.h3>
           <motion.hr
             initial={{ scaleX: 0 }}
@@ -161,14 +160,23 @@ function About() {
             exit="exit"
             className="mt-2"
           >
-            Γίνετε μέλος της ομάδας μας συμπληρώνοντας την{" "}
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfFtWLveO4_6LdXzL_iG_raS6xhytFxM5TTeVwsYbvGS3g4ww/viewform?vc=0&c=0&w=1&flr=0"
-              target="_blank"
-              className="text-myOrange underline text-lg"
-            >
-              φόρμα εγγραφής
-            </a>
+            <ul className="flex flex-col gap-2">
+              {" "}
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div> Συνένωση
+                φοιτητών.
+              </li>
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div>{" "}
+                Εκπαίδευση και βελτίωση(ανεξάρτητα επιπέδου).
+              </li>
+              <li className="flex items-center gap-2 ">
+                <div className="bg-myOrange size-2 rounded-full"></div>Προώθηση
+                του σκακιού.
+              </li>
+            </ul>
+
+            
           </motion.p>
         </div>
       </div>

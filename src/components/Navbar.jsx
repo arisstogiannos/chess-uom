@@ -7,12 +7,21 @@ function Navbar({ spline, setPage, page }) {
     spline.current.emitEvent("mouseHover", "Parent");
   }
   function triggerAnimation2(i) {
-    i === 2
-      ? spline.current.emitEvent("keyUp", "Parent")
-      : spline.current.emitEvent("keyDown", "Parent");
-    i === 2
-      ? spline.current.emitEvent("keyUp", "Spot Light")
-      : spline.current.emitEvent("keyDown", "Spot Light");
+    if(i === 2){
+
+      spline.current.emitEvent("keyUp", "Parent")
+      spline.current.emitEvent("keyUp", "Spot Light")
+    }else if(i===3){
+      spline.current.emitEvent("mouseUp", "Parent")
+      spline.current.emitEvent("mouseUp", "Spot Light")
+    }else if(i===1){
+
+    }else{
+      spline.current.emitEvent("keyDown", "Parent");
+      spline.current.emitEvent("keyDown", "Spot Light");
+
+    }
+    
 
     setPage(i);
     console.log(i);
@@ -21,19 +30,20 @@ function Navbar({ spline, setPage, page }) {
   const links = [
     { title: "Αρχική", href: 0 },
     { title: "Διάφορα", href: 1 },
-    { title: "Επικοινωνία", href: 2 },
+    { title: "Πληροφορίες", href: 2 },
+    { title: "Επικοινωνία", href: 3 },
   ];
   const [selectedLink, setSelectedLink] = useState(0);
   return (
-    <nav className="myContainer  h-28  flex items-center justify-between z-50 mb-16 ">
+    <nav className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 ">
       <div className="flex gap-24 items-center">
         {Logo()}
-        <ul className="text-myWhite flex gap-14">
+        <ul id="navlinks" className="text-myWhite flex gap-14">
           {links.map((item, i) => {
             return (
-              <li key={i}>
+              <li className="navlink" key={i}>
                 <button
-                  className={`${page === i ? "text-myOrange" : "text-myWhite"}`}
+                  className={`navlinkbtn hover:text-myOrange transition-colors ease-linear duration-300 ${page === i ? "text-myOrange" : "text-myWhite "}`}
                   onClick={() => triggerAnimation2(item.href)}
                 >
                   {item.title}
