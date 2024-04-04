@@ -1,11 +1,9 @@
 "use client";
 import LandingPage from "@/components/LandingPage";
 import Navbar from "@/components/Navbar";
-import React,{ Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
+import React,{  useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import About from "@/components/About";
-import Loading from "@/components/Loading";
-import dynamic from "next/dynamic";
 import Spline from "@splinetool/react-spline";
 import Contact from "@/components/Contact";
 
@@ -13,7 +11,7 @@ import Contact from "@/components/Contact";
 export default function Home() {
   const spline = useRef();
   const [page, setPage] = useState(0);
-  const [loading,setLoading] = useState(true)
+  // const [loading,setLoading] = useState(true)
 
   function onLoad(splineApp) {
     // save the app in a ref for later use
@@ -21,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    loading?<Loading setLoading={setLoading}/>:
+    //loading?<Loading setLoading={setLoading}/>:
     <main id="canvas3d" className="  ">
       <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen   ">
 

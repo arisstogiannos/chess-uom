@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import {motion} from 'framer-motion'
 import React, { useState } from "react";
 
 function Navbar({ spline, setPage, page }) {
@@ -35,7 +35,7 @@ function Navbar({ spline, setPage, page }) {
   ];
   const [selectedLink, setSelectedLink] = useState(0);
   return (
-    <nav className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 ">
+    <motion.nav initial={{y:100,opacity:0}} animate={{y:0,opacity:1,transition:{duration:0.4,delay:0.8,ease:'circOut'}}} className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 ">
       <div className="flex gap-24 items-center">
         {Logo()}
         <ul id="navlinks" className="text-myWhite flex gap-14">
@@ -69,7 +69,7 @@ function Navbar({ spline, setPage, page }) {
         </span>
         <span className="button-text tracking-wide">Εγγραφη</span>
       </a>
-    </nav>
+    </motion.nav>
   );
 }
 
