@@ -24,10 +24,10 @@ function About() {
   };
   return (
     <section className="myContainer mx-auto">
-      <div className="text-myWhite ml-auto w-2/3 flex flex-col gap-14 3xl:gap-40">
-        <div className="w-2/3 flex flex-col gap-2 self-center">
+      <div className="text-myWhite ml-auto w-full md:w-2/3 flex flex-col gap-14 3xl:gap-40">
+        <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
-            className="text-2xl font-semibold tracking-wide "
+            className="text-xl md:text-2xl font-semibold tracking-wide "
             variants={variants}
             initial="exit"
             animate="enter"
@@ -60,7 +60,7 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="mt-2"
+            className="mt-2 text-sm md:text-base"
           >
             Η σκακιστική ομάδα του ΠΑ.ΜΑΚ. ιδρύθηκε το 2022. Συντελείται από
             σχεδών 100 φοιτητές και απόφοιτους από όλα τα τμήματα της σχολής και
@@ -70,7 +70,7 @@ function About() {
       
         <div className="w-1/2 ml-auto z-50 flex flex-col gap-2 ">
           <motion.h3
-            className="text-2xl font-semibold tracking-wide"
+            className="text-xl md:text-2xl font-semibold tracking-wide"
             variants={variants}
             initial="exit"
             animate="enter"
@@ -95,14 +95,14 @@ function About() {
                 ease: [0.55, 0, 1, 0.45],
               },
             }}
-            className="w-1/3 origin-left border-myOrange"
+            className="w-2/3 origin-left border-myOrange"
           ></motion.hr>
           <motion.p
             variants={variants}
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2 "
+            className="z-50 mt-2 text-sm md:text-base "
           >
             <ul className="flex flex-col gap-2">
               <li className="flex items-center gap-2 ">
@@ -124,9 +124,9 @@ function About() {
             </ul>
           </motion.p>
         </div>
-        <div className="w-2/3 flex flex-col gap-2 self-center">
+        <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
-            className="text-2xl font-semibold tracking-wide"
+            className="text-xl  md:text-2xl font-semibold tracking-wide"
             variants={variants}
             initial="exit"
             animate="enter"
@@ -158,7 +158,7 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="mt-2"
+            className="mt-2 text-sm md:text-base"
           >
             <ul className="flex flex-col gap-2">
               {" "}

@@ -23,11 +23,11 @@ function Contact() {
         }),
       };
   return (
-    <section className='h-full  myContainer mx-auto'>
+    <section className=' myContainer mx-auto'>
         
-              <div className="w-1/3 mr-auto mt-10 z-50 flex flex-col gap-2 text-myWhite">
+              <div className="w-full md:w-1/3 mr-auto mt-10 z-50 flex flex-col gap-2 text-myWhite">
           <motion.h3
-            className="text-2xl font-semibold tracking-wide"
+            className="text-xl md:text-2xl font-semibold tracking-wide"
             variants={variants}
             initial="exit"
             animate="enter"
@@ -59,13 +59,13 @@ function Contact() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2"
+            className="z-50 mt-2 text-sm md:text-base"
           >
             Βρείτε μας στο{" "}
             <a
               href="https://www.facebook.com/groups/455607596757531"
               target="_blank"
-              className="text-myOrange underline text-lg"
+              className="text-myOrange underline text-base md:text-lg"
             >
               Facebook
             </a>{" "}
@@ -73,7 +73,7 @@ function Contact() {
             <a
               href="https://discord.gg/XXf6pvePrv"
               target="_blank"
-              className="text-myOrange underline text-lg "
+              className="text-myOrange underline text-base md:text-lg "
             >
               Discord
             </a>
@@ -81,9 +81,9 @@ function Contact() {
             ομάδας στείλτε μας ένα e-mail στο chess@uom.edu.gr
           </motion.p>
         </div>
-              <div className="w-1/3 mr-auto mt-10 z-50 flex flex-col gap-2 text-myWhite">
+              <div className="w-full md:w-1/3 mr-auto mt-10 z-50 flex flex-col gap-2 text-myWhite">
               <motion.h3
-            className="text-2xl font-semibold tracking-wide"
+            className="text-xl md:text-2xl font-semibold tracking-wide"
             variants={variants}
             initial="exit"
             animate="enter"
@@ -115,13 +115,13 @@ function Contact() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2"
+            className="z-50 mt-2 md:text-base text-sm"
           >
               Γίνετε μέλος της ομάδας μας συμπληρώνοντας την{" "}
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfFtWLveO4_6LdXzL_iG_raS6xhytFxM5TTeVwsYbvGS3g4ww/viewform?vc=0&c=0&w=1&flr=0"
               target="_blank"
-              className="text-myOrange underline text-lg"
+              className="text-myOrange underline "
             >
               φόρμα εγγραφής
             </a>

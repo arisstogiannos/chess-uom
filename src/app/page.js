@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "@/components/About";
 import Spline from "@splinetool/react-spline";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 // const Spline = dynamic(() => import('@splinetool/react-spline'),{loading:()=><p>Loading</p>});
 export default function Home() {
@@ -20,8 +21,8 @@ export default function Home() {
 
   return (
     //loading?<Loading setLoading={setLoading}/>:
-    <main id="canvas3d" className="  ">
-      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen   ">
+    <main id="canvas3d" className="   ">
+      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen    ">
 
         <Spline
           onLoad={onLoad}

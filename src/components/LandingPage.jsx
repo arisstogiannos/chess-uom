@@ -65,18 +65,19 @@ function LandingPage() {
 //   }
 
   return (
-    <section className="h-screen text-myWhite flex mt-6">
-      <div className="w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
+    <section className="myContainer  text-myWhite flex mt-6">
+      <div className="w-full md:w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
         <motion.h1 
         variants={variants}
         initial="exit"
         animate="enter"
-        exit="exit" className="text-3xl capitalize font-semibold mb-10">
+        exit="exit" className="text-xl md:text-3xl capitalize font-semibold mb-10">
           
             Καλώς ορίσατε στην Σκακιστική ομάδα του Πανεπιστημίου Μακεδονίας!
           
         </motion.h1>
         <motion.p 
+        className="text-sm sm:text-base"
         variants={variants}
         initial="exit"
         animate="enter"
