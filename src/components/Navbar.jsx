@@ -5,7 +5,20 @@ import MenuButton from "./MenuButton";
 
 function Navbar({ spline, setPage, page }) {
   
-  
+  const [isTabletOrPhone, setIsTabletOrPhone] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTabletOrPhone(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Call once initially
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const [menuOpen, setMenuOpen] = useState(false);
   function triggerAnimation() {
@@ -49,23 +62,23 @@ function Navbar({ spline, setPage, page }) {
         {Logo()}
         <motion.ul
         
-          initial={window.innerWidth<768&&{ x: "100%" }}
+          initial={isTabletOrPhone&&{ x: "100%" }}
           transition={{ duration: 0.8, ease: "circInOut" }}
-          animate={menuOpen || window.innerWidth>768 ? { x: 0 } : { x: "100%" }}
+          animate={menuOpen || !isTabletOrPhone ? { x: 0 } : { x: "100%" }}
           id="navlinks"
           className="text-myWhite  text-3xl md:text-base flex-col max-md:pl-12 max-md:justify-center md:flex-row flex gap-14 max-md:w-2/3 max-md:h-full max-md:bg-myOrange/100 max-md:backdrop-blur-md max-md:absolute max-md:top-0 max-md:right-0 z-[900]"
         >
           {links.map((item, i) => {
             return (
               <motion.li
-                initial={window.innerWidth<768&&{ x: "100%", opacity: 0 }}
+                initial={isTabletOrPhone&&{ x: "100%", opacity: 0 }}
                 transition={{
                   duration: 0.8,
                   delay: i * 0.05,
                   ease: "circInOut",
                 }}
                 animate={
-                  menuOpen || window.innerWidth>768? { x: 0, opacity: 1 } : { x: "100%", opacity: 1 }
+                  menuOpen || isTabletOrPhone? { x: 0, opacity: 1 } : { x: "100%", opacity: 1 }
                 }
                 className="navlink"
                 key={i}
