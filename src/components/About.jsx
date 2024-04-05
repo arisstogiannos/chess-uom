@@ -24,8 +24,8 @@ function About() {
   };
   return (
     <section className="myContainer mx-auto">
-      <div className="text-myWhite ml-auto w-full md:w-2/3 flex flex-col gap-14 3xl:gap-40">
-        <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
+      <div className="text-myWhite ml-auto w-2/3 flex flex-col gap-14 3xl:gap-24">
+        <div className="w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
             className="text-xl md:text-2xl font-semibold tracking-wide "
             variants={variants}
