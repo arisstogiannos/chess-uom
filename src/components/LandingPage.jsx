@@ -71,20 +71,21 @@ function LandingPage() {
         variants={variants}
         initial="exit"
         animate="enter"
-        exit="exit" className="text-xl md:text-3xl capitalize font-semibold mb-10">
+        exit="exit" className="text-xl md:text-3xl capitalize tracking-wide font-medium mb-10">
           
             Καλώς ορίσατε στην Σκακιστική ομάδα του Πανεπιστημίου Μακεδονίας!
           
         </motion.h1>
+        
         <motion.p 
-        className="text-sm sm:text-base"
+        className="text-sm sm:text-base font-light tracking-wide"
         variants={variants}
         initial="exit"
         animate="enter"
         exit="exit">
-          Το τμήμα σκακιού, ιδρύθηκε με σκοπό την δημιουργία σκακιστικής.
-          κοινότητας στο πανεπιστήμιο με άτομα που είναι ήδη σκακιστές και.
-          θέλουν να ασχοληθούν με το αγαπημένο τους άθλημα αλλά και με άτομα που.
+          Το τμήμα σκακιού, ιδρύθηκε με σκοπό την δημιουργία σκακιστικής
+          κοινότητας στο πανεπιστήμιο με άτομα που είναι ήδη σκακιστές και
+          θέλουν να ασχοληθούν με το αγαπημένο τους άθλημα αλλά και με άτομα που
           δεν είναι, αλλά έχουν θέληση να μάθουν περισσότερα.
         </motion.p>
         {/* <div className=" -z-10 absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-myOrange filter blur-[110px] size-[200px] rounded-sm"></div>

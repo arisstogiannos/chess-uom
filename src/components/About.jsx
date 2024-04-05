@@ -27,7 +27,7 @@ function About() {
       <div className="text-myWhite ml-auto w-full md:w-2/3 flex flex-col gap-14 3xl:gap-24">
         <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
-            className="text-xl md:text-2xl font-semibold tracking-wide "
+            className="text-xl md:text-2xl font-semibold  "
             variants={variants}
             initial="exit"
             animate="enter"
@@ -70,7 +70,7 @@ function About() {
       
         <div className="w-1/2 ml-auto z-50 flex flex-col gap-2 ">
           <motion.h3
-            className="text-xl md:text-2xl font-semibold tracking-wide"
+            className="text-xl md:text-2xl font-semibold "
             variants={variants}
             initial="exit"
             animate="enter"
