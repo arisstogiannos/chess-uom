@@ -3,22 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import MenuButton from "./MenuButton";
 
-function Navbar({ spline, setPage, page }) {
+function Navbar({ spline, setPage, page,isTabletOrPhone }) {
   
-  const [isTabletOrPhone, setIsTabletOrPhone] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsTabletOrPhone(window.innerWidth <= 768); // Adjust the breakpoint as needed
-    };
-
-    handleResize(); // Call once initially
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+ 
 
   const [menuOpen, setMenuOpen] = useState(false);
   function triggerAnimation() {
@@ -32,11 +19,14 @@ function Navbar({ spline, setPage, page }) {
       spline.current.emitEvent("mouseUp", "Parent");
       spline.current.emitEvent("mouseUp", "Spot Light");
     } else if (i === 1) {
+      spline.current.setZoom(2)
     } else {
       spline.current.emitEvent("keyDown", "Parent");
       spline.current.emitEvent("keyDown", "Spot Light");
     }
-
+    setMenuOpen(false)
+    const c=document.getElementById('checkbox')
+    c.ariaChecked=true;
     setPage(i);
     console.log(i);
   }

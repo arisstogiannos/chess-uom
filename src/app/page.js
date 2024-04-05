@@ -1,23 +1,46 @@
 "use client";
 import LandingPage from "@/components/LandingPage";
 import Navbar from "@/components/Navbar";
-import React,{  useRef, useState } from "react";
+import React,{  useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import About from "@/components/About";
-import Spline from "@splinetool/react-spline";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import dynamic from 'next/dynamic';
+
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
 
 // const Spline = dynamic(() => import('@splinetool/react-spline'),{loading:()=><p>Loading</p>});
 export default function Home() {
   const spline = useRef();
   const [page, setPage] = useState(0);
   // const [loading,setLoading] = useState(true)
+  const [isTabletOrPhone, setIsTabletOrPhone] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTabletOrPhone(window.innerWidth <= 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Call once initially
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   function onLoad(splineApp) {
     // save the app in a ref for later use
     spline.current = splineApp;
+    if(isTabletOrPhone){
+      spline.current.setZoom(2)
+    }
+
   }
+  
 
   return (
     //loading?<Loading setLoading={setLoading}/>:
@@ -26,9 +49,9 @@ export default function Home() {
 
         <Spline
           onLoad={onLoad}
-          scene="https://draft.spline.design/v5rj5kq1KWmy77le/scene.splinecode"/>
+          scene="https://draft.spline.design/M5Z4IhavzMI6TKZc/scene.splinecode"/>
       </div>
-      <Navbar spline={spline} setPage={setPage} page={page} />
+      <Navbar spline={spline} setPage={setPage} page={page} isTabletOrPhone={isTabletOrPhone} />
       <AnimatePresence mode="wait">
         {page === 0 && <LandingPage key={0} spline={spline} /> }
         {page===2&& <About key={1} />}
