@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import MenuButton from "./MenuButton";
 
@@ -60,11 +60,13 @@ function Navbar({ spline, setPage, page }) {
     >
       <div className="flex  gap-24 items-center">
         {Logo()}
-        <motion.ul
+        <AnimatePresence>
+        {!isTabletOrPhone||menuOpen?<motion.ul
         
           initial={isTabletOrPhone&&{ x: "100%" }}
           transition={{ duration: 0.8, ease: "circInOut" }}
-          animate={menuOpen || !isTabletOrPhone ? { x: 0 } : { x: "100%" }}
+          animate={{ x: 0 }}
+          exit={ { x: "100%" }}
           id="navlinks"
           className="text-myWhite  text-3xl md:text-base flex-col max-md:pl-12 max-md:justify-center md:flex-row flex gap-14 max-md:w-2/3 max-md:h-full max-md:bg-myOrange/100 max-md:backdrop-blur-md max-md:absolute max-md:top-0 max-md:right-0 z-[900]"
         >
@@ -78,8 +80,9 @@ function Navbar({ spline, setPage, page }) {
                   ease: "circInOut",
                 }}
                 animate={
-                  menuOpen || !isTabletOrPhone? { x: 0, opacity: 1 } : { x: "100%", opacity: 1 }
+                  { x: 0, opacity: 1 } 
                 }
+                exit={{ x: "100%", opacity: 1 }}
                 className="navlink"
                 key={i}
               >
@@ -94,7 +97,8 @@ function Navbar({ spline, setPage, page }) {
               </motion.li>
             );
           })}
-        </motion.ul>
+        </motion.ul>:null}
+        </AnimatePresence>
       </div>
       {/* <button
         onClick={triggerAnimation}
