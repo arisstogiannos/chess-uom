@@ -19,7 +19,7 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
       spline.current.emitEvent("mouseUp", "Parent");
       spline.current.emitEvent("mouseUp", "Spot Light");
     } else if (i === 1) {
-      spline.current.setZoom(2)
+      spline.current.setZoom(1.05)
     } else {
       spline.current.emitEvent("keyDown", "Parent");
       spline.current.emitEvent("keyDown", "Spot Light");
@@ -58,7 +58,7 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
           animate={{ x: 0 }}
           exit={ { x: "100%" }}
           id="navlinks"
-          className="text-myWhite  text-3xl md:text-base flex-col max-md:pl-12 max-md:justify-center md:flex-row flex gap-14 max-md:w-2/3 max-md:h-full max-md:bg-myOrange/100 max-md:backdrop-blur-md max-md:absolute max-md:top-0 max-md:right-0 z-[900]"
+          className="text-myWhite  text-3xl md:text-base flex-col max-md:pl-12 max-md:pt-40 md:flex-row flex gap-10 md:gap-14 max-md:w-2/3 max-md:h-full max-md:bg-myOrange/80 max-md:backdrop-blur-md max-md:absolute max-md:top-0 max-md:right-0 z-[900]"
         >
           {links.map((item, i) => {
             return (

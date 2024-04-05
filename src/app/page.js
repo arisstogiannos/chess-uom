@@ -36,7 +36,7 @@ export default function Home() {
     // save the app in a ref for later use
     spline.current = splineApp;
     if(isTabletOrPhone){
-      spline.current.setZoom(2)
+      spline.current.setZoom(0.6)
     }
 
   }
@@ -45,7 +45,7 @@ export default function Home() {
   return (
     //loading?<Loading setLoading={setLoading}/>:
     <main id="canvas3d" className="">
-      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen    ">
+      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-screen   ">
 
         <Spline
           onLoad={onLoad}
