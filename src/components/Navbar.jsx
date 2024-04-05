@@ -56,7 +56,7 @@ function Navbar({ spline, setPage, page }) {
         opacity: 1,
         transition: { duration: 0.4, delay: 0.8, ease: "circOut" },
       }}
-      className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 "
+      className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 overflow-x-hidden "
     >
       <div className="flex  gap-24 items-center">
         {Logo()}
@@ -78,13 +78,13 @@ function Navbar({ spline, setPage, page }) {
                   ease: "circInOut",
                 }}
                 animate={
-                  menuOpen || isTabletOrPhone? { x: 0, opacity: 1 } : { x: "100%", opacity: 1 }
+                  menuOpen || !isTabletOrPhone? { x: 0, opacity: 1 } : { x: "100%", opacity: 1 }
                 }
                 className="navlink"
                 key={i}
               >
                 <button
-                  className={`navlinkbtn md:hover:text-myOrange transition-colors ease-linear duration-300 ${
+                  className={`navlinkbtn md:hover:text-myOrange transition-colors ease-linear duration-300 relative ${
                     page === i ? "text-myBlack  md:text-myOrange" : "text-myWhite "
                   }`}
                   onClick={() => triggerAnimation2(item.href)}
