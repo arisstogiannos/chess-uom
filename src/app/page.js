@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     //loading?<Loading setLoading={setLoading}/>:
-    <main id="canvas3d" className="   ">
+    <main id="canvas3d" className="">
       <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen    ">
 
         <Spline
