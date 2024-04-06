@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import dynamic from 'next/dynamic';
+import Puzzles from "@/components/Puzzles";
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
@@ -49,13 +50,14 @@ export default function Home() {
 
         <Spline
           onLoad={onLoad}
-          scene="https://draft.spline.design/M5Z4IhavzMI6TKZc/scene.splinecode"/>
+          scene="https://prod.spline.design/Cyk1LeDuv8KuAT5W/scene.splinecode"/>
       </div>
       <Navbar spline={spline} setPage={setPage} page={page} isTabletOrPhone={isTabletOrPhone} />
       <AnimatePresence mode="wait">
         {page === 0 && <LandingPage key={0} spline={spline} /> }
         {page===2&& <About key={1} />}
         {page===3&& <Contact key={2} />}
+        {page===1&& <Puzzles key={3}/>}
         
       </AnimatePresence>
     </main>
