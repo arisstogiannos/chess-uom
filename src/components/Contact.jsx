@@ -59,7 +59,7 @@ function Contact() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2 text-sm md:text-base"
+            className="z-50 mt-2 text-sm md:text-base bodytxt"
           >
             Βρείτε μας στο{" "}
             <a
@@ -115,7 +115,7 @@ function Contact() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2 md:text-base text-sm"
+            className="z-50 mt-2 md:text-base text-sm bodytxt"
           >
               Γίνετε μέλος της ομάδας μας συμπληρώνοντας την{" "}
             <a

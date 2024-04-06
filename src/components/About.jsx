@@ -60,7 +60,7 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="mt-2 text-sm md:text-base"
+            className="mt-2 text-sm md:text-base text-myWhite/90 bodytxt"
           >
             Η σκακιστική ομάδα του ΠΑ.ΜΑΚ. ιδρύθηκε το 2022. Συντελείται από
             σχεδών 100 φοιτητές και απόφοιτους από όλα τα τμήματα της σχολής και
@@ -102,7 +102,7 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="z-50 mt-2 text-sm md:text-base "
+            className="z-50 mt-2 bodytxt text-sm md:text-base text-myWhite/90"
           >
             <ul className="flex flex-col gap-2">
               <li className="flex items-center gap-2 ">
@@ -158,7 +158,7 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="mt-2 text-sm md:text-base"
+            className="mt-2 text-sm md:text-base text-myWhite/90 bodytxt"
           >
             <ul className="flex flex-col gap-2">
               {" "}

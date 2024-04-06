@@ -78,7 +78,7 @@ function LandingPage() {
         </motion.h1>
         
         <motion.p 
-        className="text-sm sm:text-base font-light tracking-wide"
+        className="text-sm sm:text-base font-light bodytxt text-myWhite/80"
         variants={variants}
         initial="exit"
         animate="enter"

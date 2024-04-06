@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 @layer components {
-
-    h2,h4,h5,h6,p,button{
-        
-        letter-spacing: .6px;
-    }
+  h2,h4,h5,h6,p,button,div{
+    
+    letter-spacing: .7px;
+  }
+  
+  .bodytxt{
+    letter-spacing: 0.7px;
+  }
     h1,h3{
       letter-spacing: 0.8px;
     }

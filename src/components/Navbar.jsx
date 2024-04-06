@@ -77,7 +77,7 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
                 key={i}
               >
                 <button
-                  className={`navlinkbtn md:hover:text-myOrange transition-colors ease-linear duration-300 relative ${
+                  className={`navlinkbtn md:hover:text-myOrange transition-colors ease-linear duration-300 relative py-1 ${
                     page === i ? "text-myBlack  md:text-myOrange" : "text-myWhite "
                   }`}
                   onClick={() => triggerAnimation2(item.href)}
