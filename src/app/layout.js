@@ -1,7 +1,10 @@
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const worksans = Work_Sans({ subsets: ["latin"],weight:['400','500','600','700'] });
+const worksans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata = {
   title: "Uom Chess",
@@ -11,7 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={worksans.style} className="bg-myBlack overflow-hidden">{children}</body>
+      <body style={worksans.style} className="bg-myBlack overflow-hidden">
+        {children}
+        
+      </body>
     </html>
   );
 }

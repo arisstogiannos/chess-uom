@@ -130,7 +130,7 @@ function Puzzles() {
   };
   return (
     <section className="myContainer mt-24 relative">
-      <div className="flex gap-10 items-center">
+      <div className="flex gap-14 items-center">
         <motion.h5
           initial={{ x: -20, opacity: 0 }}
           animate={{
@@ -147,7 +147,7 @@ function Puzzles() {
         >
           Επίπεδο :
         </motion.h5>
-        <ul className="flex gap-5">
+        <ul className="flex gap-8">
           {buttons.map((b, i) => (
             <motion.li
               key={i}

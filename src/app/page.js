@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import dynamic from 'next/dynamic';
 import Puzzles from "@/components/Puzzles";
+import Background from "@/components/Background";
 
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
@@ -58,7 +59,7 @@ export default function Home() {
         {page===2&& <About key={1} />}
         {page===3&& <Contact key={2} />}
         {page===1&& <Puzzles key={3}/>}
-        
+        <Background page={page}/>
       </AnimatePresence>
     </main>
 

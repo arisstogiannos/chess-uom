@@ -88,10 +88,9 @@ function LandingPage() {
           θέλουν να ασχοληθούν με το αγαπημένο τους άθλημα αλλά και με άτομα που
           δεν είναι, αλλά έχουν θέληση να μάθουν περισσότερα.
         </motion.p>
-        {/* <div className=" -z-10 absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-myOrange filter blur-[110px] size-[200px] rounded-sm"></div>
-        <div className=" -z-20 absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-2/3 bg-myWhite filter blur-[200px] size-[200px] rounded-sm"></div> */}
-        {/* <div className=" -z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-myOrange filter blur-[110px] size-[500px] rounded-full"></div>
-        <div className=" -z-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-myWhite filter blur-[200px] size-[700px] rounded-full"></div> */}
+        
+        
+        
       </div>
       {/* {pawns.map((item, i) => {
         return <div style={{position:'fixed',left:item.left,top:item.top,scale:item.scale}}>{item.svg}</div>;
