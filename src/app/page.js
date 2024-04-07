@@ -5,7 +5,6 @@ import React,{  useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import dynamic from 'next/dynamic';
 import Puzzles from "@/components/Puzzles";
 
