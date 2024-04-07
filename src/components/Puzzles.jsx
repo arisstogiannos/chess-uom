@@ -15,18 +15,14 @@ function Puzzles() {
   const [currClicks, setCurrClicks] = useState(0);
   const [difficulty, setDifficulty] = useState(1);
   useEffect(() => {
-    const ulRect = document
-      .getElementById("ulContainer")
-      .getBoundingClientRect();
-    const distance = document
-      .querySelector("#ulContainer > li:nth-child(2)")
-      .getBoundingClientRect();
+    const ulRect = document.getElementById("ulContainer").getBoundingClientRect();
+    const distance = document.querySelector("#ulContainer > li:nth-child(2)").getBoundingClientRect();
     myX = distance.left - ulRect.left;
   });
 
   useEffect(() => {
     const liElements = document.querySelectorAll(".puzzleLi");
-    setMaxClicks(liElements.length - 1);
+    setMaxClicks(liElements.length - 3);
     setCurrClicks(0);
     setXPercent(0);
   }, [difficulty]);
