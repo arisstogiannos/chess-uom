@@ -58,6 +58,7 @@ export default function Home() {
         {page === 1 && <Puzzles key={3}/> }
         {page===2&& <About key={1} />}
         {page===3&& <Contact key={2} />}
+        {page===1&& <Puzzles key={3}/>}
         
       </AnimatePresence>
     </main>
