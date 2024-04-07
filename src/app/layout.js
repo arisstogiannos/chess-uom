@@ -1,6 +1,5 @@
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const worksans = Work_Sans({ subsets: ["latin"],weight:['400','500','600','700'] });
 
