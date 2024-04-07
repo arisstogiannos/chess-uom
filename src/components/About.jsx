@@ -97,7 +97,7 @@ function About() {
             }}
             className="w-2/3 origin-left border-myOrange"
           ></motion.hr>
-          <motion.p
+          <motion.div
             variants={variants}
             initial="exit"
             animate="enter"
@@ -122,7 +122,7 @@ function About() {
                 Συμμετοχή σε τουρνουά.
               </li>
             </ul>
-          </motion.p>
+          </motion.div>
         </div>
         <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
@@ -153,7 +153,7 @@ function About() {
             }}
             className="w-1/3 origin-left border-myOrange"
           ></motion.hr>
-          <motion.p
+          <motion.div
             variants={variants}
             initial="exit"
             animate="enter"
@@ -177,7 +177,7 @@ function About() {
             </ul>
 
             
-          </motion.p>
+          </motion.div>
         </div>
       </div>
     </section>

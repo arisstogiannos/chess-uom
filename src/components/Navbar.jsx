@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import MenuButton from "./MenuButton";
 
 function Navbar({ spline, setPage, page,isTabletOrPhone }) {
@@ -19,7 +19,8 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
       spline.current.emitEvent("mouseUp", "Parent");
       spline.current.emitEvent("mouseUp", "Spot Light");
     } else if (i === 1) {
-      spline.current.setZoom(1.05)
+      //spline.current.setZoom(1.05)
+      spline.current.emitEventReverse("start", "Parent");
     } else {
       spline.current.emitEvent("keyDown", "Parent");
       spline.current.emitEvent("keyDown", "Spot Light");
@@ -28,12 +29,11 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
     const c=document.getElementById('checkbox')
     c.ariaChecked=true;
     setPage(i);
-    console.log(i);
   }
 
   const links = [
     { title: "Αρχική", href: 0 },
-    { title: "Διάφορα", href: 1 },
+    { title: "Παζλ", href: 1 },
     { title: "Πληροφορίες", href: 2 },
     { title: "Επικοινωνία", href: 3 },
   ];

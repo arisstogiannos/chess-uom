@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* #slider::-webkit-scrollbar{
+  height: 0.4vh;
+}
+#slider::-webkit-scrollbar-thumb{
+  background-color: white;
+}
+#slider::-webkit-scrollbar{
+  background-color: black;
+} */
+
+
 @layer components {
   h2,h4,h5,h6,p,button,div{
     
