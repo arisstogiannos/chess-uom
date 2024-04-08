@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import gsap from "gsap";
+import {gsap} from "gsap";
 
 function Puzzles({isPhone}) {
   const scrollContainer = useRef(null);
@@ -127,7 +127,7 @@ function Puzzles({isPhone}) {
     }),
   };
   return (
-    <section className="myContainer mt-16 sm:mt-24 relative overflow-hidden">
+    <section className="myContainer xl:mt-10 3xl:mt-16 sm:mt-24 relative overflow-hidden">
       <div className="flex gap-8 sm:gap-14 items-center">
         <motion.h5
           initial={{ x: -20, opacity: 0 }}
@@ -216,7 +216,7 @@ function Puzzles({isPhone}) {
         initial="exit"
         animate="enter"
         exit="exit"
-        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-[60vh] sm:overflow-y-hidden py-10"
+        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-[60vh] sm:overflow-y-hidden pt-3 pb-10 3xl:pb-10 3xl:pt-10"
       >
         <AnimatePresence mode="wait">
           <ul
@@ -285,7 +285,7 @@ function Puzzles({isPhone}) {
           onClick={handlePrev}
           className={`${
             currClicks > 0 ? "visible" : "invisible"
-          } active:-translate-x-3 hover:scale-90 transition-all duration-200 ease-in-out  size-24 bg-transparent rounded-full border-r-myBlack border-myOrange border-solid border flex items-center justify-center `}
+          } active:-translate-x-3 hover:scale-90 transition-all duration-200 ease-in-out  size-20 3xl:size-24 bg-transparent rounded-full border-r-myBlack border-myOrange border-solid border flex items-center justify-center `}
         >
           <div className=" ml-16">
             <svg

@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-#slider::-webkit-scrollbar{
+html::-webkit-scrollbar{
   width: 0px;
 }
-#slider::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb{
   background-color: #FFA800;
 }
-#slider::-webkit-scrollbar{
+html::-webkit-scrollbar{
   background-color: transparent;
 }
 

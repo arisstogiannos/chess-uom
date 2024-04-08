@@ -52,7 +52,7 @@ function About() {
                 ease: [0.55, 0, 1, 0.45],
               },
             }}
-            className="w-1/3 border-myOrange origin-left"
+            className="w-48 border-myOrange origin-left"
           ></motion.hr>
 
           <motion.p
@@ -95,7 +95,7 @@ function About() {
                 ease: [0.55, 0, 1, 0.45],
               },
             }}
-            className="w-2/3 origin-left border-myOrange"
+            className="w-48 origin-left border-myOrange"
           ></motion.hr>
           <motion.div
             variants={variants}
@@ -151,7 +151,7 @@ function About() {
                 ease: [0.55, 0, 1, 0.45],
               },
             }}
-            className="w-1/3 origin-left border-myOrange"
+            className="w-48 origin-left border-myOrange"
           ></motion.hr>
           <motion.div
             variants={variants}

@@ -48,11 +48,14 @@ export default function Home() {
   return (
     //loading?<Loading setLoading={setLoading}/>:
     <main id="canvas3d" className="">
-      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-screen   ">
+      <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-screen max-sm:pointer-events-none  ">
 
         <Spline
           onLoad={onLoad}
           scene="https://draft.spline.design/L5QHzoTgV3Py1ASa/scene.splinecode"/>
+           <div className="absolute left-0 bottom-3 z-50 text-myBlue">
+          <a href="https://portfolio-nu-ivory-88.vercel.app/">Developed&Designed by Aris Stogiannos</a>
+        </div>
       </div>
       <Navbar spline={spline} setPage={setPage} page={page} isTabletOrPhone={isTabletOrPhone} />
       <AnimatePresence mode="wait">
@@ -63,6 +66,7 @@ export default function Home() {
        
       </AnimatePresence>
         <Background page={page}/>
+       
     </main>
 
   );
