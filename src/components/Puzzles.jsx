@@ -218,7 +218,7 @@ function Puzzles({isPhone}) {
         initial="exit"
         animate="enter"
         exit="exit"
-        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-[50vh] sm:overflow-y-hidden py-10"
+        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-[60vh] sm:overflow-y-hidden py-10"
       >
         <AnimatePresence mode="wait">
           <ul
