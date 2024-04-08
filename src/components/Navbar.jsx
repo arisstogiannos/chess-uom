@@ -17,8 +17,7 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
       } else {
         spline.current.emitEvent("keyUp", "Wrapper");
       }
-      spline.current.emitEvent("keyUp", "Parent");
-      spline.current.emitEvent("keyUp", "Spot Light");
+      
     } else if (i === 3) {
       spline.current.emitEvent("mouseUp", "Parent");
       spline.current.emitEvent("mouseUp", "Spot Light");
