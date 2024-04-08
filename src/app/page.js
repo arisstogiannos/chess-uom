@@ -3,12 +3,13 @@ import LandingPage from "@/components/LandingPage";
 import Navbar from "@/components/Navbar";
 import React,{  useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
 import dynamic from 'next/dynamic';
-import Puzzles from "@/components/Puzzles";
 import Background from "@/components/Background";
 
+
+const About = dynamic(() => import('@/components/About'));
+const Contact = dynamic(() => import('@/components/Contact'));
+const Puzzles = dynamic(() => import('@/components/Puzzles'));
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
 });

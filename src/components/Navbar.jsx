@@ -19,12 +19,12 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
       }
       
     } else if (i === 3) {
-      spline.current.emitEvent("mouseUp", "Parent");
+      spline.current.emitEvent("keyUp", "chessboard");
       spline.current.emitEvent("mouseUp", "Spot Light");
     } else if (i === 1) {
       //spline.current.setZoom(1.05)
 
-      spline.current.emitEventReverse("start", "Parent");
+      spline.current.emitEvent("keyDown", "Wrapper");
     } else {
       spline.current.emitEvent("keyDown", "Parent");
       spline.current.emitEvent("keyDown", "Spot Light");
