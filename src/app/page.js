@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsTabletOrPhone(window.innerWidth <= 768); // Adjust the breakpoint as needed
+      setIsTabletOrPhone(window.innerWidth <= 1024); // Adjust the breakpoint as needed
     };
 
     handleResize(); // Call once initially
@@ -58,9 +58,9 @@ export default function Home() {
         {page === 1 && <Puzzles key={3}/> }
         {page===2&& <About key={1} />}
         {page===3&& <Contact key={2} />}
-        {page===1&& <Puzzles key={3}/>}
-        <Background page={page}/>
+       
       </AnimatePresence>
+        <Background page={page}/>
     </main>
 
   );

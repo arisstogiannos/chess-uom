@@ -16,6 +16,7 @@ module.exports = {
         myBlack:'#000000',
         myWhite:'#ffffff',
         myOrange:'#FFA800',
+        myBlue:'#060D46',
       },
       screens:{
         '3xl':'1800px'

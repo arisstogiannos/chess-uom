@@ -139,7 +139,7 @@ function Puzzles() {
             opacity: 0,
             transition: { duration: 0.3, ease: "circIn", delay: 0.2 },
           }}
-          className="text-3xl text-myWhite"
+          className="text-xl lg:text-2xl 3xl:text-3xl text-myWhite"
         >
           Επίπεδο :
         </motion.h5>
@@ -155,7 +155,7 @@ function Puzzles() {
             >
               <button
                 onClick={() => setDifficulty(i + 1)}
-                className={` text-xl capitalize hover:text-myWhite/60 transition-colors duration-200 ${
+                className={` text-lg 3xl:text-xl capitalize hover:text-myWhite/60 transition-colors duration-200 ${
                   difficulty === i + 1 ? "text-myOrange" : "text-myWhite"
                 }`}
               >
@@ -181,7 +181,7 @@ function Puzzles() {
             ease: [0.55, 0, 1, 0.45],
           },
         }}
-        className="w-1/2 border-myOrange origin-left mt-4"
+        className="lg:w-1/2 border-myOrange origin-left mt-4"
       ></motion.hr>
       <motion.div
         id="slider"
@@ -189,13 +189,13 @@ function Puzzles() {
         initial="exit"
         animate="enter"
         exit="exit"
-        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-hidden py-10"
+        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-screen sm:overflow-y-hidden py-10"
       >
         <AnimatePresence mode="wait">
           <ul
             id="ulContainer"
             ref={scrollContainer}
-            className="flex gap-40 mt-10 pointer-events-none"
+            className="flex-col sm:flex-row flex gap-40 mt-10 pointer-events-none"
           >
             {puzzles.map(
               (item, index) =>
@@ -229,7 +229,7 @@ function Puzzles() {
                       width={300}
                       height={300}
                       unoptimized={true}
-                      className={`  min-w-[300px]`}
+                      className={`  max-w-[250px] 3xl:max-w-[300px]`}
                     />
                     <p className="text-myWhite text-xl">{item.desc}</p>
                   </motion.li>
@@ -253,7 +253,7 @@ function Puzzles() {
           />
         </svg>
       </div> */}
-      <div className="flex justify-between">
+      <div className="hidden sm:flex justify-between">
         <motion.button
           onClick={handlePrev}
           className={`${
@@ -280,7 +280,7 @@ function Puzzles() {
           onClick={handleNext}
           className={`${
             currClicks < maxClicks ? "visible" : "invisible"
-          } active:translate-x-3 hover:scale-90 transition-all duration-200 ease-in-out  size-24 bg-transparent rounded-full border-l-myBlack border-myOrange border-solid border flex items-center justify-center `}
+          } active:translate-x-3 hover:scale-90   transition-all duration-200 ease-in-out size-20 3xl:size-24 bg-transparent rounded-full border-l-myBlack border-myOrange border-solid border flex items-center justify-center `}
         >
           <div className=" mr-16">
             <svg

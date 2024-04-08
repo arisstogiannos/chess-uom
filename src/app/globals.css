@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #slider::-webkit-scrollbar{
-  height: 0.4vh;
+#slider::-webkit-scrollbar{
+  width: 0px;
 }
 #slider::-webkit-scrollbar-thumb{
-  background-color: white;
+  background-color: #FFA800;
 }
 #slider::-webkit-scrollbar{
-  background-color: black;
-} */
+  background-color: transparent;
+}
 
 
 @layer components {
