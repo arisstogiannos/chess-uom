@@ -1,18 +1,22 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import MenuButton from "./MenuButton";
 
-function Navbar({ spline, setPage, page,isTabletOrPhone }) {
-  
- 
-
+function Navbar({ spline, setPage, page, isTabletOrPhone }) {
   const [menuOpen, setMenuOpen] = useState(false);
   function triggerAnimation() {
     spline.current.emitEvent("mouseHover", "Parent");
   }
   function triggerAnimation2(i) {
     if (i === 2) {
+      //about
+      if (!isTabletOrPhone) {
+        spline.current.emitEvent("keyUp", "Parent");
+        spline.current.emitEvent("keyUp", "Spot Light");
+      } else {
+        spline.current.emitEvent("keyUp", "Wrapper");
+      }
       spline.current.emitEvent("keyUp", "Parent");
       spline.current.emitEvent("keyUp", "Spot Light");
     } else if (i === 3) {
@@ -20,14 +24,15 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
       spline.current.emitEvent("mouseUp", "Spot Light");
     } else if (i === 1) {
       //spline.current.setZoom(1.05)
+
       spline.current.emitEventReverse("start", "Parent");
     } else {
       spline.current.emitEvent("keyDown", "Parent");
       spline.current.emitEvent("keyDown", "Spot Light");
     }
-    setMenuOpen(false)
-    const c=document.getElementById('checkbox')
-    c.ariaChecked=true;
+    setMenuOpen(false);
+    const c = document.getElementById("checkbox");
+    c.ariaChecked = true;
     setPage(i);
   }
 
@@ -51,43 +56,44 @@ function Navbar({ spline, setPage, page,isTabletOrPhone }) {
       <div className="flex  gap-24 items-center">
         {Logo()}
         <AnimatePresence>
-        {!isTabletOrPhone||menuOpen?<motion.ul
-        
-          initial={isTabletOrPhone&&{ x: "100%" }}
-          transition={{ duration: 0.8, ease: "circInOut" }}
-          animate={{ x: 0 }}
-          exit={ { x: "100%" }}
-          id="navlinks"
-          className="text-myWhite  text-3xl lg:text-base flex-col max-lg:pl-12 max-lg:pt-40 lg:flex-row flex gap-10 lg:gap-14 max-md:w-2/3 max-lg:w-1/2 max-lg:h-full max-lg:bg-myOrange/80 max-lg:backdrop-blur-lg max-lg:absolute max-lg:top-0 max-lg:right-0 z-[900]"
-        >
-          {links.map((item, i) => {
-            return (
-              <motion.li
-                initial={isTabletOrPhone&&{ x: "100%", opacity: 0 }}
-                transition={{
-                  duration: 0.8,
-                  delay: i * 0.05,
-                  ease: "circInOut",
-                }}
-                animate={
-                  { x: 0, opacity: 1 } 
-                }
-                exit={{ x: "100%", opacity: 1 }}
-                className="navlink"
-                key={i}
-              >
-                <button
-                  className={`navlinkbtn lg:hover:text-myOrange transition-colors ease-linear duration-300 relative py-1 ${
-                    page === i ? "text-myBlack  lg:text-myOrange" : "text-myWhite "
-                  }`}
-                  onClick={() => triggerAnimation2(item.href)}
-                >
-                  {item.title}
-                </button>
-              </motion.li>
-            );
-          })}
-        </motion.ul>:null}
+          {!isTabletOrPhone || menuOpen ? (
+            <motion.ul
+              initial={isTabletOrPhone && { x: "100%" }}
+              transition={{ duration: 0.8, ease: "circInOut" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              id="navlinks"
+              className="text-myWhite  text-3xl lg:text-base flex-col max-lg:pl-12 max-lg:pt-40 lg:flex-row flex gap-10 lg:gap-14 max-md:w-2/3 max-lg:w-1/2 max-lg:h-full max-lg:bg-myOrange/80 max-lg:backdrop-blur-lg max-lg:absolute max-lg:top-0 max-lg:right-0 z-[900]"
+            >
+              {links.map((item, i) => {
+                return (
+                  <motion.li
+                    initial={isTabletOrPhone && { x: "100%", opacity: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: i * 0.05,
+                      ease: "circInOut",
+                    }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: "100%", opacity: 1 }}
+                    className="navlink"
+                    key={i}
+                  >
+                    <button
+                      className={`navlinkbtn lg:hover:text-myOrange transition-colors ease-linear duration-300 relative py-1 ${
+                        page === i
+                          ? "text-myBlack  lg:text-myOrange"
+                          : "text-myWhite "
+                      }`}
+                      onClick={() => triggerAnimation2(item.href)}
+                    >
+                      {item.title}
+                    </button>
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
+          ) : null}
         </AnimatePresence>
       </div>
       {/* <button

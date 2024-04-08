@@ -68,7 +68,7 @@ function About() {
           </motion.p>
         </div>
       
-        <div className="w-1/2 ml-auto z-50 flex flex-col gap-2 ">
+        <div className="sm:w-1/2  sm:ml-auto z-50 flex flex-col gap-2 ">
           <motion.h3
             className="text-xl md:text-2xl font-semibold "
             variants={variants}
