@@ -19,10 +19,12 @@ export default function Home() {
   const [page, setPage] = useState(0);
   // const [loading,setLoading] = useState(true)
   const [isTabletOrPhone, setIsTabletOrPhone] = useState(false);
+  const [isPhone, setIsPhone] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsTabletOrPhone(window.innerWidth <= 1024); // Adjust the breakpoint as needed
+      setIsPhone(window.innerWidth <= 640)
     };
 
     handleResize(); // Call once initially
@@ -50,12 +52,12 @@ export default function Home() {
 
         <Spline
           onLoad={onLoad}
-          scene="https://prod.spline.design/Cyk1LeDuv8KuAT5W/scene.splinecode"/>
+          scene="https://draft.spline.design/L5QHzoTgV3Py1ASa/scene.splinecode"/>
       </div>
       <Navbar spline={spline} setPage={setPage} page={page} isTabletOrPhone={isTabletOrPhone} />
       <AnimatePresence mode="wait">
         {page === 0 && <LandingPage key={0} spline={spline} /> }
-        {page === 1 && <Puzzles key={3}/> }
+        {page === 1 && <Puzzles key={3} isPhone={isPhone}/> }
         {page===2&& <About key={1} />}
         {page===3&& <Contact key={2} />}
        

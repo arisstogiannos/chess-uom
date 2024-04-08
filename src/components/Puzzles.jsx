@@ -4,19 +4,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import Cursor from "./Cursor";
 
-function Puzzles() {
+function Puzzles({isPhone}) {
   const scrollContainer = useRef(null);
   const [xPercent, setXPercent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false); // New state for animation
   const [clicked, setClicked] = useState(false); // New state for animation
-
+  const [dropDownOpen, setDropDownOpen] = useState(false);
   let myX = 0;
   const [maxClicks, setMaxClicks] = useState(0);
   const [currClicks, setCurrClicks] = useState(0);
   const [difficulty, setDifficulty] = useState(1);
   useEffect(() => {
-    const ulRect = document.getElementById("ulContainer").getBoundingClientRect();
-    const distance = document.querySelector("#ulContainer > li:nth-child(2)").getBoundingClientRect();
+    const ulRect = document
+      .getElementById("ulContainer")
+      .getBoundingClientRect();
+    const distance = document
+      .querySelector("#ulContainer > li:nth-child(2)")
+      .getBoundingClientRect();
     myX = distance.left - ulRect.left;
   });
 
@@ -55,7 +59,7 @@ function Puzzles() {
   const puzzles = [
     { desc: "matse2EASY", src: "/matse2EASY.webp", diff: 1 },
     { desc: "matse2EASY", src: "/matse2EASY.webp", diff: 1 },
-    
+
     {
       desc: "blacktoplaydifficult",
       src: "/blacktoplaydifficult.webp",
@@ -125,8 +129,8 @@ function Puzzles() {
     }),
   };
   return (
-    <section className="myContainer mt-24 relative">
-      <div className="flex gap-14 items-center">
+    <section className="myContainer mt-16 sm:mt-24 relative overflow-hidden">
+      <div className="flex gap-8 sm:gap-14 items-center">
         <motion.h5
           initial={{ x: -20, opacity: 0 }}
           animate={{
@@ -143,27 +147,52 @@ function Puzzles() {
         >
           Επίπεδο :
         </motion.h5>
-        <ul className="flex gap-8">
-          {buttons.map((b, i) => (
-            <motion.li
-              key={i}
-              variants={variants}
-              animate="enter"
-              exit="exit"
-              initial="exit"
-              custom={i}
-            >
-              <button
-                onClick={() => setDifficulty(i + 1)}
-                className={` text-lg 3xl:text-xl capitalize hover:text-myWhite/60 transition-colors duration-200 ${
-                  difficulty === i + 1 ? "text-myOrange" : "text-myWhite"
-                }`}
+        <div className="relative ">
+        <button onClick={()=>(setDropDownOpen((prev)=>(!prev)))} className="flex items-center justify-between w-36 sm:hidden text-lg capitalize bg-myOrange rounded-full px-5 py-2">
+          {buttons[difficulty - 1]}
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 25 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`${dropDownOpen?'rotate-180':'rotate-0'}`}
+          >
+            <path
+              d="M2 2L12.5 12.5L23 2"
+              stroke="black"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+       
+        {(dropDownOpen || !isPhone) && (
+          <motion.ul   className="flex-col sm:flex-row flex gap-8 max-sm:absolute max-sm:w-full max-sm:px-5 max-sm:py-5 max-sm:mt-3 rounded-md max-sm:bg-myOrange z-50">
+            {buttons.map((b, i) => (
+              (i+1!=difficulty || !isPhone)  &&<motion.li
+                key={i}
+                variants={variants}
+                animate="enter"
+                exit="exit"
+                initial="exit"
+                custom={i}
               >
-                {b}
-              </button>
-            </motion.li>
-          ))}
-        </ul>
+                <button
+                  onClick={() => {setDifficulty(i + 1);setDropDownOpen(false)}}
+                  className={` text-lg 3xl:text-xl capitalize hover:text-myWhite/60 transition-colors duration-200 ${
+                    difficulty === i + 1 ? "text-myOrange" : "text-myWhite"
+                  }`}
+                >
+                  {b}
+                </button>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+       
+        </div>
       </div>
       <motion.hr
         initial={{ scaleX: 0 }}
@@ -189,7 +218,7 @@ function Puzzles() {
         initial="exit"
         animate="enter"
         exit="exit"
-        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-[50vh] sm:overflow-y-hidden py-10"
+        className=" text-sm mdtext-base text-myWhite/90 bodytxt overflow-x-hidden overflow-y-scroll max-sm:h-screen sm:overflow-y-hidden py-10"
       >
         <AnimatePresence mode="wait">
           <ul
