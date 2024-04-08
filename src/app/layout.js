@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={worksans.style} className="bg-myBlack overflow-hidden">
+      <body style={worksans.style} className=" overflow-hidden">
         {children}
         
       </body>
