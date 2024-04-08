@@ -2,13 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
-import Cursor from "./Cursor";
 
 function Puzzles({isPhone}) {
   const scrollContainer = useRef(null);
   const [xPercent, setXPercent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false); // New state for animation
-  const [clicked, setClicked] = useState(false); // New state for animation
   const [dropDownOpen, setDropDownOpen] = useState(false);
   let myX = 0;
   const [maxClicks, setMaxClicks] = useState(0);
