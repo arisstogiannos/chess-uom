@@ -53,6 +53,7 @@ export default function Home() {
 
         <Spline
           onLoad={onLoad}
+          
           scene="https://prod.spline.design/Cyk1LeDuv8KuAT5W/scene.splinecode"/>
       </div>
       <Navbar spline={spline} setPage={setPage} page={page} isTabletOrPhone={isTabletOrPhone} />

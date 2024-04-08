@@ -56,26 +56,26 @@ function Puzzles({isPhone}) {
 
   const puzzles = [
     { desc: "matse2EASY", src: "/matse2EASY.webp", diff: 1 },
-    { desc: "matse2EASY", src: "/matse2EASY.webp", diff: 1 },
+    { desc: "paizounleukakaikerdizoun", src: "/paizounleukakaikerdizoun.webp", diff: 1 },
 
     {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
+      desc: "matse3",
+      src: "/matse3.webp",
+      diff: 2,
+    },
+    {
+      desc: "paizounmaurakaikerdizoun",
+      src: "/paizounmaurakaikerdizoun.webp",
       diff: 2,
     },
     {
       desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
+      src: "/paizounmaurakaikerdizoun2.webp",
       diff: 2,
     },
     {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
-      diff: 2,
-    },
-    {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
+      desc: "paizounmaurakaiisofarizoun",
+      src: "/paizounmaurakaiisofarizoun.webp",
       diff: 3,
     },
     {
