@@ -55,31 +55,32 @@ function Puzzles({isPhone}) {
   };
 
   const puzzles = [
-    { desc: "matse2EASY", src: "/matse2EASY.webp", diff: 1 },
-    { desc: "paizounleukakaikerdizoun", src: "/paizounleukakaikerdizoun.webp", diff: 1 },
+    { desc: "Ματ σε 2", src: "/matse2EASY.webp", diff: 1 },
+    { desc: "Παίζουν τα λευκά και κερδίζουν", src: "/paizounleukakaikerdizoun.webp", diff: 1 },
+    { desc: "Ματ σε 4", src: "/matse4.webp", diff: 1 },
 
     {
-      desc: "matse3",
+      desc: "Ματ σε 3",
       src: "/matse3.webp",
       diff: 2,
     },
     {
-      desc: "paizounmaurakaikerdizoun",
+      desc: "Παίζουν τα μαύρα και κερδίζουν",
       src: "/paizounmaurakaikerdizoun.webp",
       diff: 2,
     },
     {
-      desc: "blacktoplaydifficult",
-      src: "/paizounmaurakaikerdizoun2.webp",
+      desc: "Παίζουν τα μαύρα και κερδίζουν",
+      src: "/paizounmaurakaikerdizounMetrio.webp",
       diff: 2,
     },
     {
-      desc: "paizounmaurakaiisofarizoun",
+      desc: "Παίζουν τα μαύρα και ισοφαρίζουν",
       src: "/paizounmaurakaiisofarizoun.webp",
       diff: 3,
     },
     {
-      desc: "blacktoplaydifficult",
+      desc: "Παίζουν τα μαύρα και κερδίζουν",
       src: "/blacktoplaydifficult.webp",
       diff: 3,
     },
@@ -89,20 +90,11 @@ function Puzzles({isPhone}) {
       diff: 3,
     },
     {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
+      desc: "Παίζουν τα λευκά και κερδίζουν",
+      src: "/paizounleukakaikerdizounDuskolo.webp",
       diff: 3,
     },
-    {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
-      diff: 3,
-    },
-    {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
-      diff: 3,
-    },
+    
   ];
 
   const buttons = ["εύκολο", "μέτριο", "δύσκολο"];
@@ -154,7 +146,7 @@ function Puzzles({isPhone}) {
             viewBox="0 0 25 15"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`${dropDownOpen?'rotate-180':'rotate-0'}`}
+            className={`${dropDownOpen?'rotate-180':'rotate-0' } transition-all ease-in-out duration-300`}
           >
             <path
               d="M2 2L12.5 12.5L23 2"
@@ -167,7 +159,8 @@ function Puzzles({isPhone}) {
         </button>
        
         {(dropDownOpen || !isPhone) && (
-          <motion.ul   className="flex-col sm:flex-row flex gap-8 max-sm:absolute max-sm:w-full max-sm:px-5 max-sm:py-5 max-sm:mt-3 rounded-md max-sm:bg-myOrange z-50">
+          
+          <motion.ul initial={isPhone?{scaleY:0}:{scaleY:1}} animate={(!isPhone||dropDownOpen)?{scaleY:1}:{scaleY:0}} exit={{scaleY:0}}   className="flex-col sm:flex-row flex gap-8 max-sm:absolute max-sm:w-full max-sm:px-5 max-sm:py-5 max-sm:mt-3 rounded-md max-sm:bg-myOrange z-50">
             {buttons.map((b, i) => (
               (i+1!=difficulty || !isPhone)  &&<motion.li
                 key={i}
@@ -188,6 +181,7 @@ function Puzzles({isPhone}) {
               </motion.li>
             ))}
           </motion.ul>
+          
         )}
        
         </div>
@@ -222,7 +216,7 @@ function Puzzles({isPhone}) {
           <ul
             id="ulContainer"
             ref={scrollContainer}
-            className="flex-col sm:flex-row flex gap-40 mt-10 pointer-events-none"
+            className="flex-col sm:flex-row flex gap-40 mt-10 "
           >
             {puzzles.map(
               (item, index) =>
@@ -247,10 +241,11 @@ function Puzzles({isPhone}) {
                         delay: 0.08 * index,
                       },
                     }}
-                    className={` flex flex-col items-center gap-5 puzzleLi`}
+                    className={`z-50  flex flex-col items-center gap-5 puzzleLi`}
                     key={index}
                   >
                     <Image
+                    loading="lazy"
                       src={item.src}
                       alt="img"
                       width={300}
@@ -280,6 +275,22 @@ function Puzzles({isPhone}) {
           />
         </svg>
       </div> */}
+      <svg
+            width="30"
+            height="20"
+            viewBox="0 0 30 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`mx-auto mt-10 sm:hidden`}
+          >
+            <path
+              d="M2 2L12.5 12.5L23 2"
+              stroke="#FFA800"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
       <div className="hidden sm:flex justify-between">
         <motion.button
           onClick={handlePrev}

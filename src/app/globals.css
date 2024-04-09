@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 html::-webkit-scrollbar{
-  width: 0px;
+  width: 0vw;
+}
+#slider::-webkit-scrollbar{
+  width: 0vw;
 }
 html::-webkit-scrollbar-thumb{
-  background-color: #FFA800;
+  background-color: #ffffff;
 }
 html::-webkit-scrollbar{
   background-color: transparent;
@@ -14,6 +17,7 @@ html::-webkit-scrollbar{
 }
 html{
   scroll-behavior: smooth;
+  
 }
 
 @layer components {
@@ -122,13 +126,8 @@ html{
     .btn {
         position: relative;
         cursor: pointer;
-        outline: none;
-        border: 0;
         vertical-align: middle;
-        text-decoration: none;
         background: transparent;
-        padding: 0;
-        font-size: inherit;
         font-family: inherit;
       }
       
@@ -142,7 +141,6 @@ html{
         /* box-shadow: 0 0 5px 1px white; */
         position: relative;
         display: block;
-        margin: 0;
         width: 3rem;
         height: 3rem;
         background: #FFA800;
@@ -189,7 +187,7 @@ html{
         margin: 0 0 0 1.85rem;
         color: #FFA800;
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.7;
         text-align: center;
         text-transform: uppercase;
       }

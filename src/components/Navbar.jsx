@@ -18,7 +18,6 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
       } else {
         spline.current.emitEvent("keyUp", "Wrapper");
       }
-      
     } else if (i === 3) {
       spline.current.emitEvent("keyUp", "chessboard");
       spline.current.emitEvent("mouseUp", "Spot Light");
@@ -49,12 +48,12 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
       animate={{
         y: 0,
         opacity: 1,
-        transition: { duration: 0.8, delay: 0.6, ease:  [0, 0.55, 0.45, 1] },
+        transition: { duration: 0.8, delay: 0.6, ease: [0, 0.55, 0.45, 1] },
       }}
       className="myContainer  h-28  flex items-center justify-between z-50 3xl:mb-16 overflow-x-hidden "
     >
       <div className="flex justify-start gap-24 items-center">
-        <Logo scale={"scale-75 md:scale-100 origin-left"}/>
+        <Logo scale={"scale-75 md:scale-100 origin-left"} />
         <AnimatePresence>
           {!isTabletOrPhone || menuOpen ? (
             <motion.ul
@@ -92,6 +91,42 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
                   </motion.li>
                 );
               })}
+              <motion.li
+                    initial={isTabletOrPhone && { x: "100%", opacity: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 4 * 0.05,
+                      ease: "circInOut",
+                    }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: "100%", opacity: 1 }}
+                    className="navlink"
+                    key={'cta'}
+                  >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfFtWLveO4_6LdXzL_iG_raS6xhytFxM5TTeVwsYbvGS3g4ww/viewform?vc=0&c=0&w=1&flr=0"
+                target="_blank"
+                className=" bg-myBlack w-fit rounded-full py-4  px-8 relative  mt-10 flex items-center lg:hidden "
+              >
+                <span className=" tracking-wide">Εγγραφη</span>
+                <svg
+                  width="30"
+                  height="20"
+                  viewBox="0 0 30 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={` -rotate-90 ml-8`}
+                >
+                  <path
+                    d="M2 2L12.5 12.5L23 2"
+                    stroke="#FFA800"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+              </motion.li> 
             </motion.ul>
           ) : null}
         </AnimatePresence>
@@ -116,8 +151,6 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
     </motion.nav>
   );
 }
-
-
 
 function SignIcon() {
   return (
