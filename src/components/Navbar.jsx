@@ -106,7 +106,7 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfFtWLveO4_6LdXzL_iG_raS6xhytFxM5TTeVwsYbvGS3g4ww/viewform?vc=0&c=0&w=1&flr=0"
                 target="_blank"
-                className=" bg-myBlack w-fit rounded-full py-4  px-8 relative  mt-10 flex items-center lg:hidden "
+                className=" bg-myBlack w-fit rounded-full py-4  px-4 pl-6 relative  mt-10 flex items-center lg:hidden "
               >
                 <span className=" tracking-wide">Εγγραφη</span>
                 <svg
@@ -115,7 +115,7 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
                   viewBox="0 0 30 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={` -rotate-90 ml-8`}
+                  className={` -rotate-90 ml-4`}
                 >
                   <path
                     d="M2 2L12.5 12.5L23 2"
