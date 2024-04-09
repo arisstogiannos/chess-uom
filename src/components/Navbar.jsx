@@ -62,7 +62,7 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               id="navlinks"
-              className="text-myWhite  text-3xl lg:text-base flex-col max-lg:pl-8 max-lg:pt-40 lg:flex-row flex gap-10 lg:gap-14 max-md:w-2/3 max-lg:w-1/2 max-lg:h-full max-lg:bg-myOrange/80 max-lg:backdrop-blur-lg max-lg:fixed max-lg:top-0 max-lg:right-0 z-[900]"
+              className="text-myWhite  text-3xl lg:text-base flex-col  max-lg:pl-8 max-lg:pt-40 lg:flex-row flex gap-10 lg:gap-14 max-md:w-2/3 max-lg:w-1/3 max-lg:h-full max-lg:bg-myOrange/80 max-lg:backdrop-blur-lg max-lg:fixed max-lg:top-0 max-lg:right-0 z-[900]"
             >
               {links.map((item, i) => {
                 return (
