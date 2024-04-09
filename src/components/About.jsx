@@ -9,7 +9,7 @@ function About() {
       transition: {
         duration: 0.8,
         ease: [0, 0.55, 0.45, 1],
-        delay: 1.2,
+        delay: 0.7,
       },
     }),
     exit: (i) => ({
@@ -42,7 +42,7 @@ function About() {
               transition: {
                 duration: 0.8,
                 ease: [0, 0.55, 0.45, 1],
-                delay: 1.2,
+                delay: 0.7,
               },
             }}
             exit={{
@@ -85,7 +85,7 @@ function About() {
               transition: {
                 duration: 0.8,
                 ease: [0, 0.55, 0.45, 1],
-                delay: 1.2,
+                delay: 0.7,
               },
             }}
             exit={{
@@ -141,7 +141,7 @@ function About() {
               transition: {
                 duration: 0.8,
                 ease: [0, 0.55, 0.45, 1],
-                delay: 1.2,
+                delay: 0.7,
               },
             }}
             exit={{

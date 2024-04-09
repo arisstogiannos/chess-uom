@@ -9,9 +9,9 @@ function LandingPage() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.8,
         ease: [0, 0.55, 0.45, 1],
-        delay: 1
+        delay: 0.7
       },
     },
     exit: {
@@ -28,7 +28,7 @@ function LandingPage() {
 
 
   return (
-    <section className="myContainer  text-myWhite flex mt-6">
+    <section className="myContainer  text-myWhite flex mt-6 ">
       <div className="w-full md:w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
         <motion.h1 
         variants={variants}

@@ -10,8 +10,11 @@ html::-webkit-scrollbar-thumb{
 }
 html::-webkit-scrollbar{
   background-color: transparent;
-}
 
+}
+html{
+  scroll-behavior: smooth;
+}
 
 @layer components {
   h2,h4,h5,h6,p,button,div{
