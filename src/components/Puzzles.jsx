@@ -161,7 +161,7 @@ function Puzzles({isPhone}) {
        
         {(dropDownOpen || !isPhone) && (
           
-          <motion.ul initial={isPhone?{scaleY:0}:{scaleY:1}} animate={(!isPhone||dropDownOpen)?{scaleY:1}:{scaleY:0}} exit={{scaleY:0}}   className="flex-col sm:flex-row flex gap-8 max-sm:absolute max-sm:w-full max-sm:px-5 max-sm:py-5 max-sm:mt-3 rounded-md max-sm:bg-myOrange z-50">
+          <motion.ul initial={isPhone?{scaleY:0}:{scaleY:1}} animate={(!isPhone||dropDownOpen)?{scaleY:1}:{scaleY:0}} exit={isPhone&&{scaleY:0}}   className="flex-col sm:flex-row flex gap-8 max-sm:absolute max-sm:w-full max-sm:px-5 max-sm:py-5 max-sm:mt-3 rounded-md max-sm:bg-myOrange z-50">
             {buttons.map((b, i) => (
               (i+1!=difficulty || !isPhone)  &&<motion.li
                 key={i}
