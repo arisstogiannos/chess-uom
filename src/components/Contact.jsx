@@ -23,7 +23,7 @@ function Contact() {
         }),
       };
   return (
-    <section className=' myContainer mx-auto'>
+    <section className=' myContainer mx-auto h-[100dvh]'>
         
               <div className="w-full md:w-1/3 mr-auto mt-10 z-50 flex flex-col gap-2 text-myWhite">
           <motion.h3

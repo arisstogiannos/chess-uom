@@ -23,7 +23,7 @@ function About() {
     }),
   };
   return (
-    <section className="myContainer mx-auto z-50">
+    <section className="myContainer mx-auto h-[100dvh] ">
       <div className="text-myWhite ml-auto w-full md:w-2/3 flex flex-col gap-14 3xl:gap-24">
         <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3

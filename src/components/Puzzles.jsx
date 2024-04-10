@@ -120,7 +120,7 @@ function Puzzles({isPhone}) {
     }),
   };
   return (
-    <section className="myContainer xl:mt-10 3xl:mt-16 sm:mt-24 relative overflow-hidden">
+    <section className="myContainer h-[100dvh] xl:mt-10 3xl:mt-16 sm:mt-24 relative overflow-hidden">
       <div className="flex gap-8 sm:gap-14 items-center">
         <motion.h5
           initial={{ x: -20, opacity: 0 }}

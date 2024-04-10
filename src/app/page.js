@@ -44,11 +44,11 @@ export default function Home() {
 
   return (
     <>
-      <main id="canvas3d" className="">
-        <div className="absolute left-[50%] -translate-x-1/2 top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-screen   ">
+      <main className="h-[120dvh] ">
+        <div id="canvas3d"  className="z-0 absolute left-[50%] -translate-x-1/2 top-[600px] md:top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-[100dvh]   ">
           <Spline
             onLoad={onLoad}
-            scene="https://prod.spline.design/Cyk1LeDuv8KuAT5W/scene.splinecode"
+            scene="https://draft.spline.design/1lVFjcF-nW7R7OYt/scene.splinecode"
           />
         </div>
         <Navbar
@@ -65,7 +65,7 @@ export default function Home() {
         </AnimatePresence>
         <Background page={page} />
       </main>
-      <footer className="absolute top-full myContainer w-full bg-myBlack h-56 sm:h-28 gap-4 sm:gap-0 flex-col-reverse sm:flex-row flex items-center justify-center  sm:justify-between px-8">
+      <footer className="relative z-[1000] myContainer w-full bg-myBlack h-56 sm:h-32 gap-4 sm:gap-0 flex-col-reverse sm:flex-row flex items-center justify-center  sm:justify-between px-8">
         <p className="text-myWhite font-extralight text-lg">
           Created By Aris Stogiannos
         </p>

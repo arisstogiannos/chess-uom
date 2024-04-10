@@ -44,6 +44,7 @@ function Navbar({ spline, setPage, page, isTabletOrPhone }) {
   const [selectedLink, setSelectedLink] = useState(0);
   return (
     <motion.nav
+    
       initial={{ y: 20, opacity: 0 }}
       animate={{
         y: 0,
