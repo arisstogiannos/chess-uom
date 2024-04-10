@@ -23,7 +23,7 @@ function About() {
     }),
   };
   return (
-    <section className="myContainer mx-auto">
+    <section className="myContainer mx-auto z-50">
       <div className="text-myWhite ml-auto w-full md:w-2/3 flex flex-col gap-14 3xl:gap-24">
         <div className="w-full md:w-2/3 flex flex-col gap-2 self-center">
           <motion.h3
@@ -64,7 +64,7 @@ function About() {
           >
             Η σκακιστική ομάδα του ΠΑ.ΜΑΚ. ιδρύθηκε το 2022. Συντελείται από
             σχεδών 100 φοιτητές και απόφοιτους από όλα τα τμήματα της σχολής και
-            όλα τα επίπεδα παιχτηκής δυναμικότητας.
+            όλα τα επίπεδα παιχτικής δυναμικότητας.
           </motion.p>
         </div>
       
@@ -158,21 +158,21 @@ function About() {
             initial="exit"
             animate="enter"
             exit="exit"
-            className="mt-2 text-sm md:text-base text-myWhite/90 bodytxt"
+            className="mt-2 text-sm md:text-base text-myWhite/90 bodytxt z-50 "
           >
             <ul className="flex flex-col gap-2">
               {" "}
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div> Συνένωση
-                φοιτητών.
+                φοιτητών
               </li>
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div>{" "}
-                Εκπαίδευση και βελτίωση(ανεξάρτητα επιπέδου).
+                Εκπαίδευση και βελτίωση ανεξάρτητα επιπέδου
               </li>
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div>Προώθηση
-                του σκακιού.
+                του σκακιού
               </li>
             </ul>
 

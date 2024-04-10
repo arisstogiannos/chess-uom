@@ -14,11 +14,9 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
 });
 
-// const Spline = dynamic(() => import('@splinetool/react-spline'),{loading:()=><p>Loading</p>});
 export default function Home() {
   const spline = useRef();
   const [page, setPage] = useState(0);
-  // const [loading,setLoading] = useState(true)
   const [isTabletOrPhone, setIsTabletOrPhone] = useState(false);
   const [isPhone, setIsPhone] = useState(false);
 

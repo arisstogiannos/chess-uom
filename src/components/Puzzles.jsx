@@ -58,7 +58,7 @@ function Puzzles({isPhone}) {
     { desc: "Ματ σε 2 ", src: "/matse2EASY.webp", diff: 1 },
     { desc: "Ματ σε 2 ", src: "/matse2Eukolo.webp", diff: 1 },
     { desc: "Παίζουν τα λευκά και κερδίζουν", src: "/paizounleukakaikerdizounEukolo.webp", diff: 1 },
-    { desc: "Ματ σε 4 (παίζουν τα μαύρα)", src: "/matse4.webp", diff: 1 },
+    { desc: "Ματ σε 4 παίζουν τα μαύρα", src: "/matse4.webp", diff: 1 },
 
     {
       desc: "Ματ σε 3",
