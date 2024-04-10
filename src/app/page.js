@@ -44,8 +44,8 @@ export default function Home() {
 
   return (
     <>
-      <main className="h-[120dvh] ">
-        <div id="canvas3d"  className="z-0 absolute left-[50%] -translate-x-1/2 top-[600px] md:top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-[100dvh]   ">
+      <main className="h-[120vh] ">
+        <div id="canvas3d"  className="z-0 absolute left-[50%] -translate-x-1/2 top-[600px] md:top-2/3 3xl:top-[60%] -translate-y-1/2 w-screen h-[100vh]   ">
           <Spline
             onLoad={onLoad}
             scene="https://draft.spline.design/1lVFjcF-nW7R7OYt/scene.splinecode"

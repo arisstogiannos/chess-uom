@@ -28,7 +28,7 @@ function LandingPage() {
 
 
   return (
-    <section className="myContainer h-[100dvh]  text-myWhite flex mt-6 ">
+    <section className="myContainer h-[100vh]  text-myWhite flex mt-6 ">
       <div className="w-full md:w-[800px]  text-center mx-auto  pointer-events-none relative tracking-wide">
         <motion.h1 
         variants={variants}
