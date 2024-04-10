@@ -107,7 +107,7 @@ function About() {
             <ul className="flex flex-col gap-2">
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div>{" "}
-                Εβδομαδιαίες συναντήσεις μελών.
+                Εβδομαδιαίες συναντήσεις μελών
               </li>
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div> Φιλικές
@@ -115,11 +115,11 @@ function About() {
               </li>
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div> Μαθήματα
-                από υψηλόβαθμους σκακιστές.
+                από υψηλόβαθμους σκακιστές
               </li>
               <li className="flex items-center gap-2 ">
                 <div className="bg-myOrange size-2 rounded-full"></div>{" "}
-                Συμμετοχή σε τουρνουά.
+                Συμμετοχή σε τουρνουά
               </li>
             </ul>
           </motion.div>
