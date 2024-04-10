@@ -98,7 +98,7 @@ function socials() {
         </svg>
       </a>
       {/* instagram */}
-      <a href="/">
+      <a href="https://www.instagram.com/chess_uom?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" target="_blank">
         <svg
           width="31"
           height="30"
