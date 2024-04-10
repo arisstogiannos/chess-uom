@@ -55,9 +55,10 @@ function Puzzles({isPhone}) {
   };
 
   const puzzles = [
-    { desc: "Ματ σε 2", src: "/matse2EASY.webp", diff: 1 },
-    { desc: "Παίζουν τα λευκά και κερδίζουν", src: "/paizounleukakaikerdizoun.webp", diff: 1 },
-    { desc: "Ματ σε 4", src: "/matse4.webp", diff: 1 },
+    { desc: "Ματ σε 2 ", src: "/matse2EASY.webp", diff: 1 },
+    { desc: "Ματ σε 2 ", src: "/matse2Eukolo.webp", diff: 1 },
+    { desc: "Παίζουν τα λευκά και κερδίζουν", src: "/paizounleukakaikerdizounEukolo.webp", diff: 1 },
+    { desc: "Ματ σε 4 (παίζουν τα μαύρα)", src: "/matse4.webp", diff: 1 },
 
     {
       desc: "Ματ σε 3",
@@ -66,7 +67,7 @@ function Puzzles({isPhone}) {
     },
     {
       desc: "Παίζουν τα μαύρα και κερδίζουν",
-      src: "/paizounmaurakaikerdizoun.webp",
+      src: "/paizounmaurakaikerdizounMetria.webp",
       diff: 2,
     },
     {
@@ -81,12 +82,12 @@ function Puzzles({isPhone}) {
     },
     {
       desc: "Παίζουν τα μαύρα και κερδίζουν",
-      src: "/blacktoplaydifficult.webp",
+      src: "/paizounmaurakaikerdizoun.webp",
       diff: 3,
     },
     {
-      desc: "blacktoplaydifficult",
-      src: "/blacktoplaydifficult.webp",
+      desc: "Παίζουν τα μαύρα και κερδίζουν",
+      src: "/paizounmaurakaikerdizoun2.webp",
       diff: 3,
     },
     {
@@ -241,7 +242,7 @@ function Puzzles({isPhone}) {
                         delay: 0.08 * index,
                       },
                     }}
-                    className={`z-50  flex flex-col items-center gap-5 puzzleLi`}
+                    className={`z-50 text-center  flex flex-col items-center gap-5 puzzleLi`}
                     key={index}
                   >
                     <Image
